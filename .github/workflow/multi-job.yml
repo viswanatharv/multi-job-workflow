@@ -22,7 +22,6 @@ jobs:
 
   build-windows:
     runs-on: windows-latest
-    uses: actions/checkout@4    
     steps:
       - name: checkout code
         uses: actions/checkout@v4
@@ -41,13 +40,12 @@ jobs:
 
   build-macos:
     runs-on: macos-latest
-    uses: actions/checkout@v4    
     steps:
     - name: checkout code
       uses: actions/checkout@4
     
     - name: Setup Go
-      uses: actions/setup-go@v5.5.0
+      uses: actions/setup-go@v5.5
       with:
         go-version: "1.20"
 
